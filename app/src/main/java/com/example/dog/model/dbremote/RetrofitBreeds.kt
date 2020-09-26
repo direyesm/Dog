@@ -1,4 +1,4 @@
-package com.example.dog.model.dbremore
+package com.example.dog.model.dbremote
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

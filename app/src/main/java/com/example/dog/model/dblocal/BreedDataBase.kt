@@ -6,13 +6,12 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.dog.model.dao.BreedsDao
 import com.example.dog.model.dao.ImgBreedDao
-import com.example.dog.model.dbremore.BreedsList
-import com.example.dog.model.dbremore.ImagenBreedsList
-import java.security.AccessControlContext
+import com.example.dog.model.dbremote.BreedsList
+import com.example.dog.model.dbremote.ImagenBreedsList
 
 private const val DATA_BASE_NAME = "bredds_db"
 
-@Database(entities = [BreedsList::class, ImagenBreedsList::class], version = 1)
+@Database(entities = [Breed::class, ImageBreed::class], version = 1)
 abstract class BreedDataBase : RoomDatabase(){
 
     abstract fun getBreedsDao(): BreedsDao

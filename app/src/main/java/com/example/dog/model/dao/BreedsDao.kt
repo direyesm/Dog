@@ -6,13 +6,12 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.dog.model.dblocal.Breed
-import com.example.dog.model.dbremore.BreedsList
 
 @Dao
 interface BreedsDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAllBeers(mBreedsList: BreedsList)
+    suspend fun insertAllBeers(mBreedsList: List<Breed>)
 
     @Query("SELECT * FROM breed_table")
     fun getAllBreedsFromDB(): LiveData<List<Breed>>

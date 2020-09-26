@@ -1,9 +1,9 @@
-package com.example.dog.model.dbremore
+package com.example.dog.model.dbremote
 
 
 import com.google.gson.annotations.SerializedName
 
-data class ImagenBreedsList(
+data class BreedsList(
     @SerializedName("message")
     val message: List<String>,
     @SerializedName("status")
